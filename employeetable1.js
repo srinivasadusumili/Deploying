@@ -1,34 +1,34 @@
 var express=require("express");
 var app=express();
-app.listen(process.env.PORT || 1345);
+app.listen(8080);
 app.get("/",function(req,res){
 	res.sendFile(__dirname+"/"+"EmployeeTable1.html");
 });
 var emp=[{
-	empno: "0001",
-	empname : "Hari",
-	phone : "7765654543",
-	address: "Hyderabad",
-	dob : "12-06-95",
-    ms : "Un-married"
+	empnumber: "1",
+	employeename : "Chandrika",
+	phone : "7737736565",
+	address: "newyork",
+	dob : "10-06-1995",
+    maritalstatus : "Un-married"
 	},{
-	empno: "0002",
-	empname : "Narsing",
-	phone : "9765345643",
-	address: "Warangal",
-	dob : "30-09-95",
-    ms : "Un-married"
+	empnumber: "2",
+	employeename : "Ravi",
+	phone : "8765454545",
+	address: "pune",
+	dob : "15-08-95",
+    maritalstatus : "Un-married"
 	},{
-	empno: "0003",
-	empname : "Veerendra",
-	phone : "9876544543",
-	address: "Secunderabad",
+	empnumber: "3",
+	employeename : "Sidhu",
+	phone : "8976533534",
+	address: "Narsapur",
 	dob : "27-08-95",
-    ms : "Un-married"
+    maritalstatus : "Un-married"
 	}];
 
 app.get("/empdetails",function(req,res){
-	res.send(JSON.stringify(emp));
+	res.send(emp);
 });
 
 

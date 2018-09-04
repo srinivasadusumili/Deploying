@@ -9,15 +9,15 @@
       <script>
         $(document).ready(function(){
           jQuery.get("/empdetails",function(data,status){
-            var emp=JSON.parse(data);
+            var emp=data;
                 for(var i=0;i<emp.length;i++){
-                  var txt="<tr><th>"+emp[i].empno+"</th>";
-                  txt+="<th>"+emp[i].empname+"</th>";
-                  txt+="<th>"+emp[i].phone+"</th>";
-                  txt+="<th>"+emp[i].address+"</th>";
-                  txt+="<th>"+emp[i].dob+"</th>";
-                  txt+="<th>"+emp[i].ms+"</th></tr>";
-                  $("#empTable").append(txt);
+                  var table="<tr><th>"+emp[i].empnumber+"</th>";
+                  table+="<th>"+emp[i].employeename+"</th>";
+                  table+="<th>"+emp[i].phone+"</th>";
+                  table+="<th>"+emp[i].address+"</th>";
+                  table+="<th>"+emp[i].dob+"</th>";
+                  table+="<th>"+emp[i].maritalstatus+"</th></tr>";
+                  $("#empTable").append(table);
                 }
           });
         });
@@ -29,7 +29,7 @@
   <div class="table-responsive">
     <h1>Details of Employee's</h1>
     <table id="empTable" class="table table-inverse table-hover table-condensed ">
-      <thead style="background-color:#ffd1b3">
+      <thead style="background-color:#99ff33">
       <tr>
         <th>Employee Number</th>
         <th>Employee Name</th>

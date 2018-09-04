@@ -1,6 +1,6 @@
 var express=require("express");
 var app=express();
-app.listen(8080);
+app.listen(process.env.PORT || 1345);
 app.get("/",function(req,res){
 	res.sendFile(__dirname+"/"+"EmployeeTable1.html");
 });

@@ -2,7 +2,7 @@ var express=require("express");
 var app=express();
 app.listen(process.env.PORT || 1345);
 app.get("/",function(req,res){
-	res.sendFile(__dirname+"/"+"employeetable1.html");
+	res.sendFile(__dirname+"/"+"EmployeeTable1.html");
 });
 var emp=[{
 	empno: "0001",

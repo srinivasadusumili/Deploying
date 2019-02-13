@@ -30,4 +30,5 @@ var emp=[{
 app.get("/empdetails",function(req,res){
 	res.send(emp);
 	console.log('hiiii');
+	console.log('hARI');
 });
